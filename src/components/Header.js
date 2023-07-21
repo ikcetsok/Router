@@ -16,19 +16,19 @@ export default function Header() {
   // Replace the 4 <a> tags with <NavLink> components
   return (
     <div className="header">
-      <NavLink to={"/about"}>About</NavLink>
-      <NavLink to={"/articles"}>Articles</NavLink>
-      <NavLink to={"/categories"}>Categories</NavLink>
+      <NavLink to={"about"}>About</NavLink>
+      <NavLink to={"articles"}>Articles</NavLink>
+      <NavLink to={"categories"}>Categories</NavLink>
       {currentUser.username ? (
         <>
-          <NavLink to={"/profile"}>Profile</NavLink>
+          <NavLink to={"profile"}>Profile</NavLink>
           <button onClick={handleLogout} className="logout">
             {" "}
             Log Out{" "}
           </button>
         </>
       ) : (
-        <NavLink to={"/sign-up"}>Sign up</NavLink>
+        <NavLink to={"sign-up"}>Sign up</NavLink>
       )}
     </div>
   );
